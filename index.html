@@ -1,0 +1,130 @@
+<html>
+<head>
+	<title>dinosaur</title>
+
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Firechat -->
+<link rel='stylesheet' href='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css' />
+<script src='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.0.0/jquery.serialize-object.compiled.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/path.js/0.8.4/path.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+</head>
+<body>
+
+	<header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> 
+	            <span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+            </button> <a href="#" class="navbar-brand">LMU Office Hours</a>
+
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li> <a href="#/">Login</a>
+
+                </li>
+                <li> <a href="#/logout">Logout</a>
+
+                </li>
+                <li> <a href="#/register">Register</a>
+
+                </li>
+                <li> <a href="#/profile">Profile</a>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="container" class="container">
+    <!-- LOGIN -->
+    <form id="frmLogin" role="form">
+         <h2>Login</h2>
+
+
+        <div class="form-group">
+            <label for="txtEmail">Email address</label>
+            <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
+        </div>
+        <div class="form-group">
+            <label for="txtPass">Password</label>
+            <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
+        </div>
+        <button type="submit" class="btn btn-default btn-block">Login</button>
+        <br />
+        <br />
+         <h4>Login with</h4>
+ <a href="#" class="btn btn-primary bt-social" data-provider="facebook">Facebook</a>
+ <a href="#" class="btn btn-info bt-social" data-provider="twitter">Twitter</a>
+
+        <!-- <a href="#" class="btn btn-danger bt-social" data-provider="google">Google+</a> --> <a href="#" class="btn btn-default bt-social" data-provider="github">GitHub</a>
+ <a href="#" class="btn btn-warning" id="btAnon">Anon</a>
+
+    </form>
+    <!-- / LOGIN -->
+    <!-- LOGOUT -->
+    <form id="frmLogout" role="form">
+         <h2>You are logged out!</h2>
+
+    </form>
+    <!-- / LOGOUT -->
+    <!-- REGISTER -->
+    <form id="frmRegister" role="form">
+         <h2>Register</h2>
+
+        <div class="form-group">
+            <label for="txtRegEmail">Username</label>
+            <input type="text" class="form-control" id="txtName" placeholder="Enter Username" name="username" />
+        </div>
+        <div class="form-group">
+            <label for="txtRegEmail">Email address</label>
+            <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
+        </div>
+        <div class="form-group">
+            <label for="txtRegPass">Password</label>
+            <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
+        </div>
+        <button type="submit" class="btn btn-default">Register</button>
+    </form>
+    <!-- / REGISTER -->
+    <!-- PROFILE -->
+    <form id="frmProfile" role="form">
+        <h1>LMU Office Hours</h1> 
+
+        <div id='firechat-wrapper'></div>
+
+    </form>
+    <!-- / PROFILE -->
+    <hr />
+    <!-- ALERT BOX -->
+    <div id="alert" class="alert" role="alert">
+         <!-- Alert message goes in here -->
+         <h4 id="alert-title"></h4>
+
+        <p id="alert-detail"></p>
+    </div>
+    <!-- / ALERT BOX -->
+</div>
+
+
+
+</body>
+</html>
