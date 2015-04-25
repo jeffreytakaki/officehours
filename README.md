@@ -1,19 +1,19 @@
 # officehours
 LMU office hours app with fire chat
 
-** USER AUTHENTICATION **
+**USER AUTHENTICATION**
 Authentication takes place with Firebase.
 https://www.firebase.com/docs/web/guide/user-auth.html
 
 See working demo here: http://jsfiddle.net/firebase/a221m6pb/embedded/result,js/
 See Fiddle here: http://jsfiddle.net/firebase/a221m6pb/light/
 
-** WEB MESSAGING SERVICE **
+**WEB MESSAGING SERVICE**
 Amipal utilizes Firebase's own FireChat messaging service. 
 github: https://github.com/firebase/firechat
 official documentation: https://firechat.firebaseapp.com/docs/
 
-** Known Issues Needing Resolution: **
+**Known Issues Needing Resolution:**
 
 FireChat Authentication through Email, using Firebase Login credentials
 Invite to private chat
